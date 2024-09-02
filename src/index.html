@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-200 flex items-center justify-center min-h-screen">
+    <!-- Counter Container -->
+    <div class="bg-gray-200 min-h-screen flex items-center justify-center p-4">
+        <div class="bg-white shadow-lg rounded-lg p-6 w-full max-w-md">
+          <div class="flex justify-between items-center mb-4">
+            <h2 class="text-xl font-bold">Calories Tracker</h2>
+          </div>
+          
+          <!-- Input Fields -->
+          <div class="mb-4">
+            <input
+              type="text"
+              id="mealInput"
+              placeholder="Enter meal name"
+              class="border border-gray-300 rounded px-3 py-2 w-full mb-2"
+            />
+            <input
+              type="number"
+              id="calorieInput"
+              placeholder="Enter calories"
+              class="border border-gray-300 rounded px-3 py-2 w-full"
+            />
+            
+          </div>
+          <div class="flex gap-2 p-2">
+            <button id="addButton" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+              Save
+            </button>
+            <button id="cancelButton" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
+              Cancel
+            </button>
+          </div>          
+          <!-- Table -->
+          <table class="w-full text-left table-auto">
+            <thead>
+              <tr class="bg-gray-200">
+                <th class="px-4 py-2">Meal</th>
+                <th class="px-4 py-2">Calories</th>
+                <th class="px-4 py-2"></th>
+              </tr>
+            </thead>
+            <tbody id="mealTableBody">
+              <!-- Rows will be dynamically added here -->
+            </tbody>
+            <tfoot>
+              <tr class="font-bold">
+                <td class="border px-4 py-2">Total</td>
+                <td id="totalCalories" class="border px-4 py-2">0</td>
+                <td class="border px-4 py-2"></td>
+              </tr>
+            </tfoot>
+          </table>
+          
+          
+        </div>
+      </div>
+
+    <!-- JavaScript -->
+    <script src="./index.js"></script>
+  </body>
+</html>
